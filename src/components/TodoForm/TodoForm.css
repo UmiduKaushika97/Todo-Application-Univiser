@@ -10,7 +10,7 @@
     padding: 10px 20px;
     border-radius: 12px;
     border: 1px solid #ccc;
-    background-color: #f4f4f4;
+    background-color: white;
     transition: all 0.3s ease;
 }
 
@@ -22,16 +22,17 @@
 .addDiv{
     display: flex;
     justify-content: flex-end;
+    margin-right: 11px;
 }
 
 .addInput {
-    width: 10%;
+    width: 14%;
     padding: 10px 15px;
     margin-right: 10px;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #f9f9f9;
+    background-color: white;
     /* transition: all 0.3s ease; */
 
 }
@@ -137,3 +138,28 @@
     display: block;
     padding-bottom: 10px;
 }
+
+@media screen and (max-width: 992px ) {
+    .addDiv{
+        display: flex;
+        justify-content: center;
+    }
+    .addInput {
+        width: 26%;
+    
+    }
+    
+    @media screen and (max-width: 576px) {
+        .addDiv{
+            display: flex;
+            justify-content: center;
+        }
+
+        .addInput {
+            width: 26%;
+        
+        }
+    }
+    
+}
+

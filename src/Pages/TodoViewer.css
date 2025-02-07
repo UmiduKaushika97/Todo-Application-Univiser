@@ -1,0 +1,44 @@
+.container-card{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    width: 98.5%;
+}
+
+.todoCard{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.todoCard li{
+    text-decoration: none;
+}
+
+.todoCard li::marker {
+    content: none;
+}
+
+.todoCard li span {
+    width: 100%;
+    display: block;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
