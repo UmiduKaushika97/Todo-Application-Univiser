@@ -2,6 +2,8 @@ import { useState } from "react";
 import { RootState } from "../../Store/Store";
 import { useDispatch, useSelector } from "react-redux"
 import { addTodo, deleteTodo, setSearch, updateTodo } from "../../Actions/todosSlice";
+import Button from "../Button/Button";
+import './TodoForm.css';
 
 
 
@@ -42,23 +44,23 @@ const TodoForm: React.FC = () => {
 
   return (
     <div>
-        <h1>Todo App</h1>
+        <h1 className="topic">Todo App</h1>
 
         <input 
         type="text"
         placeholder="Search todos"
         value={search}
         onChange={(e) => dispatch(setSearch(e.target.value))}
-        />
+        className="search"/>
 
-        <div>
+        <div className="addDiv">
             <input
             type="text"
             value={newTodoText}
             onChange={(e) => setNewTodoText(e.target.value)}
             placeholder="Enter a new todo"
-            />
-            <button onClick={handleAddClick} className="addbutton">Add</button>
+            className="addInput"/>
+            <Button label="Add" onClick={handleAddClick} className="addButton"/>
         </div>
 
         <div className="container-card">
@@ -71,12 +73,12 @@ const TodoForm: React.FC = () => {
                         type="text"
                         value={editedText}
                         onChange={(e) => setEditedText(e.target.value)}
-                        />
-                        <button
+                        className="editText"/>
+                        <Button 
+                        label="Update"
                         onClick={() => handleUpdateClick(todo.id)}
-                        className="UpdateButton">
-                            Update
-                        </button>
+                        className="updateButton"/>
+                            
                     </div>
                 ) : (
                     <span>{todo.text}</span>
@@ -84,15 +86,19 @@ const TodoForm: React.FC = () => {
 
                 {editTodoId !== todo.id && (
                     <div>
-                        <button
-                        onClick={() => handleEditClick(todo.id, todo.text)}>
-                            Edit
-                        </button>
+                        <Button
+                        label="Edit"
+                        onClick={() => handleEditClick(todo.id, todo.text)}
+                        className="editButton"/>
+                        
+                        
 
-                        <button
-                        onClick={() => dispatch(deleteTodo(todo.id))}>
-                            Delete
-                        </button>
+                        <Button
+                        label="Delete"
+                        onClick={() => dispatch(deleteTodo(todo.id))}
+                        className="deleteButton"/>
+                            
+                       
                     </div>
                 )}
             </li>

@@ -1,0 +1,139 @@
+.topic {
+    text-align: center;
+}
+
+.search {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+.search:focus {
+    border-color: whitesmoke;
+    box-shadow: whitesmoke;
+}
+
+.addDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addInput {
+    width: 10%;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    /* transition: all 0.3s ease; */
+
+}
+
+.addInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+
+.addButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.addButton:focus {
+    outline: none;
+}
+
+.updateButton{
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.editButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.deleteButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.editText{
+    width: calc(100% - 20px);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* transition: box-shadow 0.3s ease; */
+}
+
+.container-card {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+
+}
+
+.card {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0 , 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card li {
+    text-decoration: none;
+
+}
+
+.card li::marker {
+    content: none;
+}
+
+.card li span {
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
